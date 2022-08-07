@@ -1,3 +1,3 @@
 export default function Layout({ children }) {
-  return <div className="max-w-lg text-center py-10 px-6">{children}</div>;
+  return <div className="mx-auto max-w-lg text-center">{children}</div>;
 }
