@@ -7,12 +7,12 @@ export default function Detail() {
     <Layout deps>
       <div className="mt-10 space-y-6">
         <div className="aspect-video w-full bg-gray-300"></div>
-        <div className="flex items-center space-x-4 border-b pb-4">
-          <div className="aspect-square h-10 rounded-full bg-gray-300"></div>
-          <div className="">
-            <p className="text-sm">Steve Jeds</p>
+        <div className="flex items-center space-x-3 border-b pb-4">
+          <div className="aspect-square h-12 rounded-full bg-gray-300"></div>
+          <div className="flex flex-col">
+            <p className="text-sm">Steve Jebs</p>
             <Link href="#">
-              <a className="text-sm text-gray-400">View profile →</a>
+              <a className="text-xs text-gray-400">View profile →</a>
             </Link>
           </div>
         </div>
@@ -49,26 +49,19 @@ export default function Detail() {
         </div>
         <div className="space-y-4">
           <h1 className="text-2xl font-semibold">Similar items</h1>
-          {new Array(3).fill(0).map((_, idx) => (
-            <>
-              <div key={idx} className="mb-4 flex gap-x-4">
+          <div className="grid grid-cols-2 gap-x-4">
+            {new Array(3).fill(0).map((_, idx) => (
+              <div key={idx} className="mb-4">
                 <Link href="#">
-                  <a className="flex-1">
-                    <div className="mb-2 aspect-square w-full bg-gray-300"></div>
-                    <p>iPhone14</p>
-                    <p>$140</p>
-                  </a>
-                </Link>
-                <Link href="#">
-                  <a className="flex-1">
+                  <a>
                     <div className="mb-2 aspect-square w-full bg-gray-300"></div>
                     <p>iPhone14</p>
                     <p>$140</p>
                   </a>
                 </Link>
               </div>
-            </>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </Layout>

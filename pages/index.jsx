@@ -5,11 +5,11 @@ export default function Home() {
   return (
     <>
       <Layout title="홈">
-        <div className="divide-y px-6">
+        <div className="divide-y">
           {new Array(8).fill(0).map((_, idx) => (
-            <div key={idx}>
+            <div key={idx.toString()}>
               <Link href={`/detail/${idx}`}>
-                <a className="flex items-end justify-between pt-10 pb-6">
+                <a className="flex items-end justify-between pt-6 pb-6">
                   <div className="flex space-x-4 text-left">
                     <div className="aspect-square w-16 rounded-md bg-gray-400"></div>
                     <div className="pt-2 text-sm">

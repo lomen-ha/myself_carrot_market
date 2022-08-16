@@ -31,10 +31,9 @@ export default function Layout({ children, title, deps, ...rest }) {
           {title}
         </div>
       )}
-
-      <div className={`${deps ? 'pb-10' : 'pb-24'} `}>{children}</div>
+      <div className={`${deps ? 'pb-10' : 'pb-20'} `}>{children}</div>
       <div
-        className={`fixed bottom-0 flex w-full max-w-lg justify-around border-t bg-white py-4 ${
+        className={`fixed bottom-0 flex w-full max-w-lg justify-around border-t bg-white py-2 ${
           deps && 'hidden'
         }`}
       >
