@@ -10,7 +10,7 @@ export default function Layout({ children, title, deps, ...rest }) {
   return (
     <div className="mx-auto max-w-lg px-4">
       {deps ? (
-        <div className="mx-auto w-full border-b py-2 text-black">
+        <div className="relative mx-auto grid w-full grid-cols-3 border-b py-2 text-black">
           <button onClick={onClick}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -25,6 +25,7 @@ export default function Layout({ children, title, deps, ...rest }) {
               />
             </svg>
           </button>
+          <p className="text-center">{title}</p>
         </div>
       ) : (
         <div className="mx-auto w-full border-b py-2 text-center text-black">
